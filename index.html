@@ -1,0 +1,43 @@
+<html>
+   <head>
+      <title>
+         Circular progress bar
+      </title>
+      <link rel="stylesheet" href="circular.css">
+   </head>
+   <body>
+      <svg width="160px" height="160px" style="margin: 200px 500px;">
+         <defs>
+            <linearGradient id="GradientColor">
+               <stop offset="0%" stop-color="gray" />
+               <stop offset="100%" stop-color="red" />
+            </linearGradient>
+         </defs>
+         <circle cx="80" cy="80" r="70" stroke-linecap="round">
+         </circle>
+      </svg>
+      <div id="number"></div>
+      
+      <script>
+         /*let in1=window.prompt("enter the progress no.");
+         let in2="0."+in1;
+         var c=0;
+         c=472-472*in2;
+         //window.alert(c);*/
+         let no=document.getElementById("number");
+         let counter=0;
+         setInterval(()=>{
+            if(counter==80)
+            {
+               clearInterval();
+            }
+            else
+            {
+               counter++;
+               no.innerHTML=counter+"%";
+            }
+         },25);
+         
+      </script>
+   </body>
+</html>
